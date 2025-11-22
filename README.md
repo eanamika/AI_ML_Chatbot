@@ -18,17 +18,17 @@ User Query → SBERT Embedding → Vector Search (pgvector) → Top-15 Results
 Query Processing -> Similarity Search -> Reranking -> Answer Generation
 
 ### LLM Integration (RAG)
-Model Used: Llama 3.1 70B via Groq API
-Why this approach: 1. Combines strengths of retrieval (precision) and generation (fluency)
+1. Model Used: Llama 3.1 70B via Groq API
+2. Why this approach: 1. Combines strengths of retrieval (precision) and generation (fluency)
                    2. Improves factual accuracy and domain specificity.
-Pipeline: 1. Retrieve highly relevant text
+3. Pipeline: 1. Retrieve highly relevant text
           2. Pass top-5 results as context
           3. LLM generates final summarized answer
 
 ### Web Portal 
-Frontend: HTML templates, CSS styling, JavaScript for dynamic updates
-Backend (Flask): Query processing, Database retrieval, LLM integration, Response rendering
-User Feedback System: 1. Database stores:user query, generated answer, thumbs-up/down feedback
+1. Frontend: HTML templates, CSS styling, JavaScript for dynamic updates
+2. Backend (Flask): Query processing, Database retrieval, LLM integration, Response rendering
+3. User Feedback System: 1. Database stores:user query, generated answer, thumbs-up/down feedback
                       2. Feedback used to evaluate future improvements
 
 ### Accuracy Analysis 
